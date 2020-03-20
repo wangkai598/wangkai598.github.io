@@ -1,8 +1,8 @@
 # Basic
 title: Keven
-subtitle: A blog-orientation theme for Jekyll
-welcome_message: <a href="https://github.com/onevcat/vno-jekyll" target="_blank">Download the theme</a>
-description: Vno Jekyll is a port of my Ghost theme vno.
+subtitle: Talk is cheap, show me the code
+welcome_message: Work hard and change the quality of your life
+description: I'm a nomad Software Engineer, always searching for the next challenge; no task is too scary nor too difficult. Lately I do IOS development in a medical industry.
 creator: <a href="http://onev.cat">@onevcat</a>
 
 url: "http://vno.onevcat.com"
@@ -22,7 +22,7 @@ blog_button:
 
 # Navigation buttons in the front page.
 nav:
-    - {title: Projects, description: My Projects, url: 'http://project.onevcat.com'}
+    - {title: Projects, description: My Projects, url: 'https://blog.wk598.cn'}
     # - {title: Another Button, description: A button, url: 'http://example.com'}
 
 # Pagination
@@ -37,10 +37,10 @@ comment:
     
 # Social
 social:
-    weibo: wangkai598
+    weibo: wk598
     github: wangkai598
-    twitter: wangkai598
-    gplus: 107108267983477358170
+    # twitter: wangkai598
+    # gplus: 107108267983477358170
     mail: wangkai910421@gmail.com
 
 # Google Analytics
