@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>C语言基础知识回顾day2</title>
+  <meta name="description" content="extern 与 const 的区别以及用法  const">
+  <meta name="author" content="Wei Wang">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="C语言基础知识回顾day2">
+  <meta name="twitter:description" content="extern 与 const 的区别以及用法  const">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="C语言基础知识回顾day2">
+  <meta property="og:description" content="extern 与 const 的区别以及用法  const">
+  
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://localhost:4000/2020/03/C-Learn-day02/">
+  <link rel="alternate" type="application/rss+xml" title="Keven" href="http://localhost:4000/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+  
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/assets/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/#blog" title="前往 Keven 的主页" class="blog-button"><img src="/assets/images/avatar.jpg" width="80" alt="Keven logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for Keven" class="blog-button">Keven</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">Talk is cheap, show me the code</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">I'm a nomad Software Engineer, always searching for the next challenge; no task is too scary nor too difficult. Lately I do IOS development in a medical industry.</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        <p class="panel-cover__description">Work hard and change the quality of your life</p>
+        
+        
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="Visit blog" class="blog-button">Blog</a></li>
+                
+                  <li class="navigation__item"><a href="https://blog.wk598.cn" target="_blank" title="My Projects">Projects</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+          
+          <div><nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  
+  <!-- Weibo -->
+  <li class="navigation__item">
+    <a href="http://weibo.com/wk598" title="@wk598 的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/wangkai598" title="@wangkai598 的 Github" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+  
+  
+  
+
+  
+
+  <!-- RSS -->
+  <li class="navigation__item">
+    <a href="/feed.xml" rel="author" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:wangkai910421@gmail.com" title="Contact me">
+      <i class='social fa fa-envelope'></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+  
+
+  </ul>
+</nav>
+</div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-red"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2020-03-24 14:32:24 +0800" itemprop="datePublished" class="post-meta__date date">2020-03-24</time> &#8226; <span class="post-meta__tags tags"></span>
+    </div>
+    <h1 class="post-title">C语言基础知识回顾day2</h1>
+  </header>
+
+  <section class="post">
+    <h2 id="extern-与-const-的区别以及用法">extern 与 const 的区别以及用法</h2>
+<ul>
+  <li>const</li>
+</ul>
+
+<p>任何变量的声明都可以使用const 限定符限定，该限定符指定变量的值不能被修改。对数组而言，const 限定符指定数组所有元素的值都不能被修改。</p>
+
+<ul>
+  <li>extern
+我们知道，程序的编译单位是源程序文件，一个源文件可以包含一个或若干个函数。在函数内定义的变量是局部变量，而在函数之外定义的变量则称为外部变量，外部变量也就是我们所讲的全局变量。它的存储方式为静态存储，其生存周期为整个程序的生存周期。全局变量可以为本文件中的其他函数所共用，它的有效范围为从定义变量的位置开始到本源文件结束。</li>
+</ul>
+
+<p>然而，如果全局变量不在文件的开头定义，有效的作用范围将只限于其定义处到文件结束。如果在定义点之前的函数想引用该全局变量，则应该在引用之前用关键字 extern 对该变量作“外部变量声明”，表示该变量是一个已经定义的外部变量。有了此声明，就可以从“声明”处起，合法地使用该外部变量</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include &lt;stdio.h&gt;
+</span><span class="kt">int</span> <span class="n">max</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">result</span><span class="p">;</span>
+    <span class="cm">/*外部变量声明*/</span>
+    <span class="k">extern</span> <span class="kt">int</span> <span class="n">g_X</span><span class="p">;</span>
+    <span class="k">extern</span> <span class="kt">int</span> <span class="n">g_Y</span><span class="p">;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">g_X</span><span class="p">,</span><span class="n">g_Y</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"the max value is %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">result</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cm">/*定义两个全局变量*/</span>
+<span class="kt">int</span> <span class="n">g_X</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">g_Y</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">max</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="n">y</span> <span class="o">?</span> <span class="n">x</span> <span class="o">:</span> <span class="n">y</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>如果整个工程由多个源文件组成，在一个源文件中想引用另外一个源文件中已经定义的外部变量，同样只需在引用变量的文件中用 extern 关键字加以声明即可。下面就来看一个多文件的示例:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cm">/****max.c****/</span>
+<span class="cp">#include &lt;stdio.h&gt;
+</span><span class="cm">/*外部变量声明*/</span>
+<span class="k">extern</span> <span class="kt">int</span> <span class="n">g_X</span> <span class="p">;</span>
+<span class="k">extern</span> <span class="kt">int</span> <span class="n">g_Y</span> <span class="p">;</span>
+<span class="kt">int</span> <span class="nf">max</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">g_X</span> <span class="o">&gt;</span> <span class="n">g_Y</span> <span class="o">?</span> <span class="n">g_X</span> <span class="o">:</span> <span class="n">g_Y</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="cm">/***main.c****/</span>
+<span class="cp">#include &lt;stdio.h&gt;
+</span><span class="cm">/*定义两个全局变量*/</span>
+<span class="kt">int</span> <span class="n">g_X</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">g_Y</span><span class="o">=</span><span class="mi">20</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">max</span><span class="p">();</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">result</span><span class="p">;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">max</span><span class="p">();</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"the max value is %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">result</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<h2 id="按位运算符">按位运算符</h2>
+<ul>
+  <li>“按位与”运算符&amp;</li>
+</ul>
+
+<h3 id="运算规则参加运算的两个运算量如果两个数相应位的值都是1则该位的结果值为1否则为0即0--0-00--1-01--0-01--1-1">运算规则：参加运算的两个运算量，如果两个数相应位的值都是1，则该位的结果值为1，否则为0。即：0 &amp; 0 =0；0 &amp; 1 =0；1 &amp; 0 =0；1 &amp; 1 =1。</h3>
+
+<ul>
+  <li>“按位或”运算符”|”</li>
+</ul>
+
+<h3 id="运算规则参加运算的两个运算量如果两个数相应位的值都是0即0--0-00--1-11--0-11--1-1">运算规则：参加运算的两个运算量，如果两个数相应位的值都是0，。即：0 | 0 =0；0 | 1 =1；1 | 0 =1；1 | 1 =1</h3>
+
+<ul>
+  <li>“按位异或”运算符^</li>
+</ul>
+
+<h3 id="运算规则参加运算的两个运算量如果两个数的相应位的值不同则该位的结果值为1否则为0即0--0-00--1-11--0-11--1-0">运算规则：参加运算的两个运算量，如果两个数的相应位的值不同，则该位的结果值为1，否则为0。即：0 ^ 0 =0；0 ^ 1 =1；1 ^ 0 =1；1 ^ 1 =0</h3>
+
+<ul>
+  <li>“按位取反”运算符~</li>
+</ul>
+
+<p><a href="https://github.com/wangkai598/C-review">demo可以参考</a></p>
+
+  </section>
+</article>
+
+<section class="read-more">
+   
+   
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">更早的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2020/03/C-isNum/" title="link to C语言基础知识回顾day1">C语言基础知识回顾day1</a></h2>
+       <p class="excerpt">判断输入是否是一个数字  正确写法 while ((c = getchar())!=EOF) {        if (c&gt;= '0' &amp;&amp; c &lt;= '9') {            printf("你输入的是:%d\n",c-'0');        }    }很多人会有疑问,为什么不这么写:  错误写法 if (c&gt;= 0 &amp;&amp; c &lt;= 9)   用于判断 c 中的字符是否为数字.如果它是数字，那么数字对应的数值是 c-‘...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2020-03-23 14:32:24 +0800" class="post-list__meta--date date">2020-03-23</time> &#8226; <span class="post-list__meta--tags tags"></span><a class="btn-border-small" href=/2020/03/C-isNum/>继续阅读</a></div>
+   </div>
+   
+</section>
+
+<section class="post-comments">
+  
+    <div id="disqus_thread"></div>
+    <script>
+    
+    var disqus_config = function () {
+        this.page.url = "http://localhost:4000/2020/03/C-Learn-day02/";
+        this.page.identifier = "/2020/03/C-Learn-day02/";
+    };
+
+    var disqus_shortname = 'vno-jekyll';
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>要查看<a href="http://disqus.com/?ref_noscript"> Disqus </a>评论，请启用 JavaScript</noscript>
+    
+  
+  
+  
+  
+</section>
+
+
+            <section class="footer">
+    <footer>
+    	<span class="footer__copyright">本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a></span>
+        <span class="footer__copyright">由 <a href="https://jekyllrb.com">Jekyll</a> 于 2020-03-24 生成，感谢 <a href="https://www.digitalocean.com/?refcode=30ed2d146762">Digital Ocean</a> 为本站提供稳定的 VPS 服务</span>
+        <span class="footer__copyright">本站由 <a href="http://onev.cat">@onevcat</a> 创建，采用 <a href="https://github.com/onevcat/vno-jekyll">Vno - Jekyll</a> 作为主题，您可以在 GitHub 找到<a href="https://github.com/onevcat/OneV-s-Den">本站源码</a> - &copy; 2020</span>
+    </footer>
+</section>
+
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+    
+  </body>
+
+</html>
