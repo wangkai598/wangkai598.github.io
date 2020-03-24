@@ -1,0 +1,50 @@
+---
+layout: post
+title: C语言基础知识回顾day1
+date: 2020-03-23 15:32:24.000000000 +09:00
+---
+## 判断输入是否是一个数字
+> 正确写法
+{% highlight c %}
+ while ((c = getchar())!=EOF) {
+        if (c>= '0' && c <= '9') {
+            printf("你输入的是:%d\n",c-'0');
+        }
+    }
+{% endhighlight %}
+### 很多人会有疑问,为什么不这么写:
+> 错误写法
+{% highlight c %}
+ if (c>= 0 && c <= 9) 
+{% endhighlight %}
+* 用于判断 c 中的字符是否为数字.如果它是数字，那么数字对应的数值是 
+c-'0'
+### for example
+{% highlight c %}
+ 0-'0'   0
+ 1-'0'   1
+ 2-'0'   2
+{% endhighlight %}
+> 统计各个数字,空白符（包括空格符，制表符以及换行符）的出现次数
+{% highlight c %}
+ int c,i,nwhite,nother;
+    int ndigit[10];
+    nwhite = nother = 0;
+    for (i = 0; i<10; i++) {
+        ndigit[i] = 0;
+    }
+    while ((c = getchar())!=EOF) {
+        if (c >= '0' && c <= '9')
+            ++ndigit[c-'0'];
+        else if (c == ' ' || c == '\n' || c == '\t')
+            ++nwhite;
+        else
+            ++nother;
+    }
+    printf("digits ==");
+    for (i = 0; i<10; i++) {
+        printf(" %d",ndigit[i]);
+    }
+    printf(",white space = %d,other = %d\n",nwhite,nother);
+{% endhighlight %}
+大家可以参考这个程序去深入理解，这是我个人的一些日常笔记，大家发现有问题可以及时和我交流。
