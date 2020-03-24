@@ -5,8 +5,8 @@
     <description>I'm a nomad Software Engineer, always searching for the next challenge; no task is too scary nor too difficult. Lately I do IOS development in a medical industry.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 24 Mar 2020 10:31:50 +0800</pubDate>
-    <lastBuildDate>Tue, 24 Mar 2020 10:31:50 +0800</lastBuildDate>
+    <pubDate>Tue, 24 Mar 2020 10:46:12 +0800</pubDate>
+    <lastBuildDate>Tue, 24 Mar 2020 10:46:12 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -65,6 +65,8 @@ c-‘0’
     &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;,white space = %d,other = %d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nwhite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nother&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;大家可以参考这个程序去深入理解，这是我个人的一些日常笔记，大家发现有问题可以及时和我交流。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/wangkai598/C-review&quot;&gt;demo可以参考&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 23 Mar 2020 14:32:24 +0800</pubDate>
         <link>http://localhost:4000/2020/03/C-isNum/</link>

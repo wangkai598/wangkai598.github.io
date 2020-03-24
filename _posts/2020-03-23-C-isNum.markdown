@@ -48,3 +48,5 @@ c-'0'
     printf(",white space = %d,other = %d\n",nwhite,nother);
 {% endhighlight %}
 大家可以参考这个程序去深入理解，这是我个人的一些日常笔记，大家发现有问题可以及时和我交流。
+
+[demo可以参考](https://github.com/wangkai598/C-review)
