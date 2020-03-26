@@ -6,17 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>Hello World - Vno</title>
-  <meta name="description" content="What’s this">
+  <title>C语言基础知识回顾day3</title>
+  <meta name="description" content="今天主要学习了有关控制流的内容  if else 等常用的就不一一列举了,在这里涉及了一个折半查找，顺便复习下  利用switch case 改写了之前的while 语句，详见demo">
   <meta name="author" content="Wei Wang">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Hello World - Vno">
-  <meta name="twitter:description" content="What’s this">
+  <meta name="twitter:title" content="C语言基础知识回顾day3">
+  <meta name="twitter:description" content="今天主要学习了有关控制流的内容  if else 等常用的就不一一列举了,在这里涉及了一个折半查找，顺便复习下  利用switch case 改写了之前的while 语句，详见demo">
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Hello World - Vno">
-  <meta property="og:description" content="What’s this">
+  <meta property="og:title" content="C语言基础知识回顾day3">
+  <meta property="og:description" content="今天主要学习了有关控制流的内容  if else 等常用的就不一一列举了,在这里涉及了一个折半查找，顺便复习下  利用switch case 改写了之前的while 语句，详见demo">
   
   <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
   <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="/css/main.css">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-  <link rel="canonical" href="http://localhost:4000/2016/02/hello-world-vno/">
+  <link rel="canonical" href="http://localhost:4000/2020/03/C-Learn-day03/">
   <link rel="alternate" type="application/rss+xml" title="Keven" href="http://localhost:4000/feed.xml">
   
   <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
@@ -134,70 +134,21 @@
             <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="2016-02-16 14:32:24 +0800" itemprop="datePublished" class="post-meta__date date">2016-02-16</time> &#8226; <span class="post-meta__tags tags"></span>
+      <time datetime="2020-03-25 09:32:24 +0800" itemprop="datePublished" class="post-meta__date date">2020-03-25</time> &#8226; <span class="post-meta__tags tags"></span>
     </div>
-    <h1 class="post-title">Hello World - Vno</h1>
+    <h1 class="post-title">C语言基础知识回顾day3</h1>
   </header>
 
   <section class="post">
-    <h4 id="whats-this">What’s this</h4>
+    <h3 id="今天主要学习了有关控制流的内容">今天主要学习了有关控制流的内容</h3>
+<ul>
+  <li>if else 等常用的就不一一列举了,在这里涉及了一个折半查找，顺便复习下</li>
+  <li>利用switch case 改写了之前的while 语句，详见demo</li>
+</ul>
 
-<p><a href="https://github.com/onevcat/vno-jekyll">Vno Jekyll</a> is a theme for <a href="http://jekyllrb.com">Jekyll</a>. It is a port of my Ghost theme <a href="https://github.com/onevcat/vno">vno</a>, which is originally developed from <a href="https://github.com/daleanthony/uno">Dale Anthony’s Uno</a>.</p>
+<p><a href="http://note.wk598.cn">我的笔记</a>里面搜索 “折半查找”</p>
 
-<h4 id="usage">Usage</h4>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git clone https://github.com/onevcat/vno-jekyll.git your_site
-<span class="nv">$ </span><span class="nb">cd </span>your_site
-<span class="nv">$ </span>bundler <span class="nb">install</span>
-<span class="nv">$ </span>bundler <span class="nb">exec </span>jekyll serve
-</code></pre></div></div>
-
-<p>Your site with <code class="highlighter-rouge">Vno Jekyll</code> enabled should be accessible in http://127.0.0.1:4000.</p>
-
-<p>For more information about Jekyll, please visit <a href="http://jekyllrb.com">Jekyll’s site</a>.</p>
-
-<h4 id="configuration">Configuration</h4>
-
-<p>All configuration could be done in <code class="highlighter-rouge">_config.yml</code>. Remember you need to restart to serve the page when after changing the config file. Everything in the config file should be self-explanatory.</p>
-
-<h4 id="background-image-and-avatar">Background image and avatar</h4>
-
-<p>You could replace the background and avatar image in <code class="highlighter-rouge">assets/images</code> folder to change them.</p>
-
-<h4 id="sites-using-vno">Sites using Vno</h4>
-
-<p><a href="http://onevcat.com">My blog</a> is using <code class="highlighter-rouge">Vno Jekyll</code> as well, you could see how it works in real. There are some other sites using the same theme. You can find them below:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Site Name</th>
-      <th>URL</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>OneV’s Den</td>
-      <td><a href="http://onevcat.com">http://onevcat.com</a></td>
-    </tr>
-    <tr>
-      <td>July Tang</td>
-      <td><a href="http://onevcat.com">http://blog.julytang.xyz</a></td>
-    </tr>
-    <tr>
-      <td>Harry Lee</td>
-      <td><a href="http://qiuqi.li">http://qiuqi.li</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<blockquote>
-  <p>If you happen to be using this theme, welcome to <a href="https://github.com/onevcat/vno-jekyll/pulls">send me a pull request</a> to add your site link here. :)</p>
-</blockquote>
-
-<h4 id="license">License</h4>
-
-<p>Great thanks to <a href="https://github.com/daleanthony">Dale Anthony</a> and his <a href="https://github.com/daleanthony/uno">Uno</a>. Vno Jekyll is based on Uno, and contains a lot of modification on page layout, animation, font and some more things I can not remember. Vno Jekyll is followed with Uno and be licensed as <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</a>. See the link for more information.</p>
+<p><a href="https://github.com/wangkai598/C-review">demo可以参考</a></p>
 
   </section>
 </article>
@@ -205,21 +156,13 @@
 <section class="read-more">
    
    
-   <div class="read-more-item">
-       <span class="read-more-item-dim">最近的文章</span>
-       <h2 class="post-list__post-title post-title"><a href="/2020/03/C-isNum/" title="link to C语言基础知识回顾day1">C语言基础知识回顾day1</a></h2>
-       <p class="excerpt">判断输入是否是一个数字  正确写法{% highlight c %} while ((c = getchar())!=EOF) {        if (c&gt;= ‘0’ &amp;&amp; c &lt;= ‘9’) {            printf(“你输入的是:%d\n”,c-‘0’);        }    }{% endhighlight %}  很多人会有疑问,为什么不这么写:  错误写法{% highlight c %} if (c&gt;= 0 &amp;&am...&hellip;</p>
-       <div class="post-list__meta"><time datetime="2020-03-23 14:32:24 +0800" class="post-list__meta--date date">2020-03-23</time> &#8226; <span class="post-list__meta--tags tags"></span><a class="btn-border-small" href=/2020/03/C-isNum/>继续阅读</a></div>
-   </div>
-   
-   
    
    
    <div class="read-more-item">
        <span class="read-more-item-dim">更早的文章</span>
-       <h2 class="post-list__post-title post-title"><a href="/2016/02/sample-post/" title="link to Sample Post">Sample Post</a></h2>
-       <p class="excerpt">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-r...&hellip;</p>
-       <div class="post-list__meta"><time datetime="2016-02-15 14:32:24 +0800" class="post-list__meta--date date">2016-02-15</time> &#8226; <span class="post-list__meta--tags tags"></span><a class="btn-border-small" href=/2016/02/sample-post/>继续阅读</a></div>
+       <h2 class="post-list__post-title post-title"><a href="/2020/03/C-Learn-day02/" title="link to C语言基础知识回顾day2">C语言基础知识回顾day2</a></h2>
+       <p class="excerpt">extern 与 const 的区别以及用法  const任何变量的声明都可以使用const 限定符限定，该限定符指定变量的值不能被修改。对数组而言，const 限定符指定数组所有元素的值都不能被修改。  extern我们知道，程序的编译单位是源程序文件，一个源文件可以包含一个或若干个函数。在函数内定义的变量是局部变量，而在函数之外定义的变量则称为外部变量，外部变量也就是我们所讲的全局变量。它的存储方式为静态存储，其生存周期为整个程序的生存周期。全局变量可以为本文件中的其他函数所共用，它的...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2020-03-24 14:32:24 +0800" class="post-list__meta--date date">2020-03-24</time> &#8226; <span class="post-list__meta--tags tags"></span><a class="btn-border-small" href=/2020/03/C-Learn-day02/>继续阅读</a></div>
    </div>
    
 </section>
@@ -230,8 +173,8 @@
     <script>
     
     var disqus_config = function () {
-        this.page.url = "http://localhost:4000/2016/02/hello-world-vno/";
-        this.page.identifier = "/2016/02/hello-world-vno/";
+        this.page.url = "http://localhost:4000/2020/03/C-Learn-day03/";
+        this.page.identifier = "/2020/03/C-Learn-day03/";
     };
 
     var disqus_shortname = 'vno-jekyll';

@@ -1,0 +1,12 @@
+---
+layout: post
+title: C语言基础知识回顾day3
+date: 2020-03-25 10:32:24.000000000 +09:00
+---
+### 今天主要学习了有关控制流的内容
+* if else 等常用的就不一一列举了,在这里涉及了一个折半查找，顺便复习下
+* 利用switch case 改写了之前的while 语句，详见demo
+
+[我的笔记](http://note.wk598.cn)里面搜索 “折半查找”
+
+[demo可以参考](https://github.com/wangkai598/C-review)
