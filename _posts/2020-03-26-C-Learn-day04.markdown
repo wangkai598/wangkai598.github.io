@@ -1,0 +1,13 @@
+---
+layout: post
+title: C语言基础知识回顾day4
+date: 2020-03-26 10:32:24.000000000 +09:00
+---
+### 今天主要学习了do while ,break,continue,goto
+* break 语句可用于从for ,while 以及 do-while 等循环中提前退出，就如同switch 语句中提前退出一样,break语句能使程序从switch语句或最内层循环中立即跳出
+* continue 语句与break语句是想关联的,但它没有break语句常用,continue语句用于for,while或do -while 语句开始下一次循环的执行。只用于循环语句，不用于switch语句。
+* goto 语句尽可能少用，因为使用goto语句比不使用goto语句的程序段更难以理解和维护.
+
+
+
+[demo可以参考](https://github.com/wangkai598/C-review)
